@@ -72,7 +72,6 @@ function createProjectButton(container, data) {
         </div>
     `;
     container.appendChild(btn);
-
     btn.addEventListener('click', () => openProjectModal(data));
 }
 
@@ -94,7 +93,7 @@ function createMechanicButton(container, data) {
 // ==================== MODAL ====================
 function openProjectModal(data) {
     let modal = document.getElementById('project-modal');
-
+    
     if (!modal) {
         modal = document.createElement('div');
         modal.id = 'project-modal';
@@ -116,6 +115,7 @@ function openProjectModal(data) {
         modal.querySelector('.close-btn').addEventListener('click', () => {
             modal.style.display = 'none';
         });
+
         modal.addEventListener('click', (e) => {
             if (e.target === modal) modal.style.display = 'none';
         });

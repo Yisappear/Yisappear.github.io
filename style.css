@@ -159,60 +159,20 @@ header { min-height: 50vh; display: flex; align-items: center; justify-content: 
     color: var(--accent-light);
 }
 
-.frame-body {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.frame-mechanics, .frame-libs {
-    flex: 1 1 150px;
-    background: rgb(50,50,50);
-    padding: 12px;
-    border-radius: 8px;
-}
-
-.frame-small {
-    display: inline-block;
-    margin: 2px;
-    padding: 4px 8px;
-    background: rgb(70,70,70);
-    border-radius: 4px;
-    font-size: 0.85rem;
-}
-
-.frame-video {
-    flex: 2 1 300px;
-    margin-top: 12px;
-}
-
 .project-frame-bottom .btn {
     align-self: flex-start;
     margin-top: 12px;
-}
-
-.solo-btn {
-    background: #00bfff;
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.2s ease;
-}
-.solo-btn:hover {
-    background: #0099cc;
 }
 
 .modal {
     display: none;
     position: fixed;
     z-index: 2000;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.6);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -226,6 +186,40 @@ header { min-height: 50vh; display: flex; align-items: center; justify-content: 
     max-height: 90%;
     overflow-y: auto;
     position: relative;
+}
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--accent-light);
+}
+.modal-body {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+.modal-mechanics, .modal-libs {
+    flex: 1 1 200px;
+    background: rgb(50,50,50);
+    padding: 12px;
+    border-radius: 8px;
+}
+.frame-small {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 8px;
+    background: rgb(70,70,70);
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+.modal-video iframe {
+    width: 100%;
+    height: 360px;
+    border-radius: 12px;
+    margin-top: 12px;
 }
 
 .pricing-card {
