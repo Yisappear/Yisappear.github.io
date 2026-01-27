@@ -67,13 +67,43 @@ function createProjectButton(container, data) {
     btn.innerHTML = `
         <img src="${data.image}" alt="${data.title}">
         <div class="project-text">
-            <h4>${data.title} <button class="solo-btn">solo</button></h4>
+            <h4>${data.title} <span class="solo-btn">solo</span></h4>
             <p>${data.description}</p>
         </div>
     `;
     container.appendChild(btn);
 
-    btn.querySelector('.solo-btn').addEventListener('click', () => openProjectModal(data));
+    const frame = document.createElement('div');
+    frame.className = 'project-frame-bottom';
+    frame.style.display = 'none';
+    frame.innerHTML = `
+        <span class="close-frame">&times;</span>
+        <h2>${data.title}</h2>
+        <div class="frame-body">
+            <div class="frame-mechanics">
+                <h4>Mechanics:</h4>
+                ${data.mechanics.map(m => `<div class="frame-small">${m}</div>`).join('')}
+            </div>
+            <div class="frame-libs">
+                <h4>Libs:</h4>
+                ${data.libs.map(l => `<div class="frame-small">${l}</div>`).join('')}
+            </div>
+            <div class="frame-video">
+                <iframe width="100%" height="360" src="${data.youtube}" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <a href="${data.projectLink}" target="_blank" class="btn">Go to Project</a>
+    `;
+    btn.after(frame);
+
+    btn.addEventListener('click', () => {
+        frame.style.display = frame.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    frame.querySelector('.close-frame').addEventListener('click', (e) => {
+        e.stopPropagation();
+        frame.style.display = 'none';
+    });
 }
 
 function createMechanicButton(container, data) {
