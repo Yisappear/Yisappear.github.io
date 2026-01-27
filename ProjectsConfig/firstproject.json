@@ -1,0 +1,9 @@
+{
+  "title": "World Of Magic",
+  "description": "MVP game",
+  "image": "Media/world-of-magic.png",
+  "mechanics": ["Data", "Round", "Aura", "Projectile"],
+  "libs": ["ProfileStore", "React-luau"],
+  "youtube": "https://youtu.be/pAnGwRiQ4-4?si=dbDXgvzwkOn-JwP3",
+  "projectLink": "https://www.roblox.com/games/95082853868882/World-Of-Magic"
+}
