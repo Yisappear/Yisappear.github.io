@@ -64,13 +64,19 @@ async function loadMechanics() {
 function createProjectButton(container, data) {
     const btn = document.createElement('div');
     btn.className = 'project-btn';
+
+    const soloBadge = data.solo
+        ? `<span class="solo-btn">solo</span>`
+        : '';
+
     btn.innerHTML = `
         <img src="${data.image}" alt="${data.title}">
         <div class="project-text">
-            <h4>${data.title} <span class="solo-btn">solo</span></h4>
+            <h4>${data.title} ${soloBadge}</h4>
             <p>${data.description}</p>
         </div>
     `;
+
     container.appendChild(btn);
 
     btn.addEventListener('click', () => {

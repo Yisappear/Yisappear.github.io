@@ -2,6 +2,7 @@
   "title": "World Of Magic",
   "description": "MVP game",
   "image": "Media/world-of-magic.png",
+  "solo": true,
   "mechanics": ["Data", "Round", "Aura", "Projectile"],
   "libs": ["ProfileStore", "React-luau"],
   "youtube": "https://www.youtube.com/watch?v=Gluln0bG0fQ",

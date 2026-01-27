@@ -1,9 +1,9 @@
 const PortfolioData = {
     projectFiles: [
-        "firstproject.json"
+        "firstproject.json",
+        "secondproject.json",
     ],
     mechanicsFiles: [
-        "mechanic1.json",
-        "mechanic2.json"
+        "firstmechanic.json",
     ]
 };
