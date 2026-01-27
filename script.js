@@ -51,7 +51,7 @@ async function loadMechanics() {
 
     for (const file of PortfolioData.mechanicsFiles) {
         try {
-            const res = await fetch(`ProjectsConfig/${file}`);
+            const res = await fetch(`MechanicsConfig/${file}`);
             const data = await res.json();
             createMechanicButton(mechanicsGrid, data);
         } catch (e) {
@@ -80,17 +80,20 @@ function createProjectButton(container, data) {
 
 function createMechanicButton(container, data) {
     const btn = document.createElement('div');
-    btn.className = 'mechanic-btn';
+    btn.className = 'project-btn';
     btn.innerHTML = `
         <img src="${data.image}" alt="${data.title}">
-        <div class="mechanic-text">
+        <div class="project-text">
             <h4>${data.title}</h4>
             <p>${data.description}</p>
         </div>
     `;
+
     container.appendChild(btn);
 
-    btn.addEventListener('click', () => alert(`Mechanic: ${data.title}`));
+    btn.addEventListener('click', () => {
+        openProjectModal(data);
+    });
 }
 
 // ==================== MODAL ====================

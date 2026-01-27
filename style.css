@@ -164,6 +164,18 @@ header { min-height: 50vh; display: flex; align-items: center; justify-content: 
     margin-top: 12px;
 }
 
+.solo-btn {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(96, 165, 250, 0.15);
+    color: rgb(96, 165, 250);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .modal {
     display: none;
     position: fixed;
