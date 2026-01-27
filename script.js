@@ -73,37 +73,7 @@ function createProjectButton(container, data) {
     `;
     container.appendChild(btn);
 
-    const frame = document.createElement('div');
-    frame.className = 'project-frame-bottom';
-    frame.style.display = 'none';
-    frame.innerHTML = `
-        <span class="close-frame">&times;</span>
-        <h2>${data.title}</h2>
-        <div class="frame-body">
-            <div class="frame-mechanics">
-                <h4>Mechanics:</h4>
-                ${data.mechanics.map(m => `<div class="frame-small">${m}</div>`).join('')}
-            </div>
-            <div class="frame-libs">
-                <h4>Libs:</h4>
-                ${data.libs.map(l => `<div class="frame-small">${l}</div>`).join('')}
-            </div>
-            <div class="frame-video">
-                <iframe width="100%" height="360" src="${data.youtube}" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        <a href="${data.projectLink}" target="_blank" class="btn">Go to Project</a>
-    `;
-    btn.after(frame);
-
-    btn.addEventListener('click', () => {
-        frame.style.display = frame.style.display === 'none' ? 'flex' : 'none';
-    });
-
-    frame.querySelector('.close-frame').addEventListener('click', (e) => {
-        e.stopPropagation();
-        frame.style.display = 'none';
-    });
+    btn.addEventListener('click', () => openProjectModal(data));
 }
 
 function createMechanicButton(container, data) {
@@ -146,12 +116,18 @@ function openProjectModal(data) {
         modal.querySelector('.close-btn').addEventListener('click', () => {
             modal.style.display = 'none';
         });
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
     }
 
     modal.querySelector('#modal-title').innerText = data.title;
-    modal.querySelector('.modal-mechanics').innerHTML = '<h4>Mechanics:</h4>' + data.mechanics.map(m => `<div class="frame-small">${m}</div>`).join('');
-    modal.querySelector('.modal-libs').innerHTML = '<h4>Libs:</h4>' + data.libs.map(l => `<div class="frame-small">${l}</div>`).join('');
-    modal.querySelector('.modal-video').innerHTML = `<iframe width="100%" height="360" src="${data.youtube}" frameborder="0" allowfullscreen></iframe>`;
+    modal.querySelector('.modal-mechanics').innerHTML =
+        '<h4>Mechanics:</h4>' + data.mechanics.map(m => `<div class="frame-small">${m}</div>`).join('');
+    modal.querySelector('.modal-libs').innerHTML =
+        '<h4>Libs:</h4>' + data.libs.map(l => `<div class="frame-small">${l}</div>`).join('');
+    modal.querySelector('.modal-video').innerHTML =
+        `<iframe width="100%" height="360" src="${data.youtube}" frameborder="0" allowfullscreen></iframe>`;
     modal.querySelector('#modal-project-link').href = data.projectLink;
 
     modal.style.display = 'flex';
