@@ -1,6 +1,6 @@
 // ======== Skills ========
 const tools = ["Roblox API", "ProfileService", "ProfileStore", "Replica", "Promise", "ZonePlus", "VSCode", "Rojo", "Git", "React-roblox-ts", "React-Luau"];
-const languages = ["Lua", "Luau", "TypeScript", "roblox-ts", "JavaScript"];
+const languages = ["Lua", "Luau", "roblox-ts", "TypeScript", "JavaScript"];
 
 const renderTags = (list, containerId) => {
     const container = document.getElementById(containerId);
@@ -138,7 +138,7 @@ const pricingData = [
     { name: "Per-Task Commissions", price: "2000R$+ / $10+", desc: "Individual features" },
     { name: "Simple Gameplay", price: "20.000R$+ / $100+", desc: "Basic game loops" },
     { name: "Medium Gameplay", price: "60.000R$+ / $300+", desc: "Medium Difficulty Gameplay" },
-    { name: "Hourly", price: "1000R$+ / $5+" },
+    { name: "Hourly", price: "1000R$+ / $5+", desc: "Per-Hour" },
 ];
 
 const pGrid = document.getElementById('pricing-grid');
