@@ -1,5 +1,5 @@
 // ======== Skills ========
-const tools = ["Roblox API", "ProfileService", "ProfileStore", "Replica", "Promise", "VSCode", "Rojo", "Git", "React-roblox-ts", "React-Luau"];
+const tools = ["Roblox API", "ProfileService", "ProfileStore", "Replica", "Promise", "ZonePlus", "VSCode", "Rojo", "Git", "React-roblox-ts", "React-Luau"];
 const languages = ["Lua", "Luau", "TypeScript", "roblox-ts", "JavaScript"];
 
 const renderTags = (list, containerId) => {
@@ -135,12 +135,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const pricingData = [
-    { name: "Per-Task Commissions", price: "2000R$ - $10+", desc: "Individual features" },
-    { name: "Simple Gameplay", price: "$150+", desc: "Basic game loops" },
-    { name: "Medium Gameplay", price: "$350+", desc: "Medium Difficulty Gameplay" },
-    { name: "Complex Gameplay", price: "$900+", desc: "Complex Gameplay" },
-    { name: "Anticheat (S/M/C)", price: "$50 - $300+", desc: "Project dependent" },
-    { name: "Monetization", price: "$50 - $150+", desc: "Standard to Complex" }
+    { name: "Per-Task Commissions", price: "2000R$+ / $10+", desc: "Individual features" },
+    { name: "Simple Gameplay", price: "20.000R$+ / $100+", desc: "Basic game loops" },
+    { name: "Medium Gameplay", price: "60.000R$+ / $300+", desc: "Medium Difficulty Gameplay" },
+    { name: "Hourly", price: "1000R$+ / $5+" },
 ];
 
 const pGrid = document.getElementById('pricing-grid');
