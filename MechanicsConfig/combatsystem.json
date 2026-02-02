@@ -1,0 +1,10 @@
+{
+  "title": "Combat System",
+  "description": "Minimum Viable Product",
+  "image": "Media/combat-system.png",
+  "solo": false,
+  "mechanics": ["Attack", "Block", "Ragdol"],
+  "libs": ["Remote, ProfileStore"],
+  "youtube": "https://www.youtube.com/embed/enBFRkhkdx8?si=JKldqHl5HJ6Dwr3e",
+  "projectLink": ""
+}
