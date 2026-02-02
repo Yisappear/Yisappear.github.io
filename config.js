@@ -3,6 +3,6 @@ const PortfolioData = {
         "firstproject.json",
     ],
     mechanicsFiles: [
-        
+        "combatsystem.json",
     ]
 };
